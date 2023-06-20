@@ -34,7 +34,7 @@ export class Command {
       include_applications: "false",
     });
     const url = `${this.config.DiscordBaseUrl}/api/v9/channels/${this.config.ChannelId}/application-commands/search?${searchParams}`;
-    const response = await this.config.fetch(url, {
+    const response = await fetch(url, {
       headers: { authorization: this.config.SalaiToken },
     });
 
